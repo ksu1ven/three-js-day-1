@@ -18,11 +18,18 @@ export const init = () => {
 	controls.dampingFactor = 0.05;
 	controls.screenSpacePanning = false;
 
-	const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+	const renderer = new THREE.WebGLRenderer({
+		canvas,
+		antialias: true,
+		stencil: true,
+	});
 	renderer.setSize(sizes.width, sizes.height);
 	renderer.shadowMap.enabled = true;
 	renderer.setClearColor(0x000000, 0);
 	document.body.appendChild(renderer.domElement);
+
+	const gl = renderer.getContext();
+	gl.enable(gl.STENCIL_TEST);
 
 	renderer.render(scene, camera);
 

@@ -21,6 +21,6 @@ export const addPortal = (scene) => {
 	material.stencilFunc = THREE.EqualStencilFunc;
 
 	const cube = new THREE.Mesh(geometry, material);
-	cube.position.set(4, 0, -3);
+	cube.position.set(4, 0, -1);
 	scene.add(cube);
 };
