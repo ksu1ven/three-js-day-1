@@ -8,19 +8,16 @@ export const addPrimitives = (scene) => {
 		new THREE.SphereGeometry(1, 20, 10),
 	];
 	const materials = [
-		new THREE.MeshBasicMaterial({
+		new THREE.MeshNormalMaterial({
 			color: guiParams.primitiveColors[0],
-			wireframe: true,
 		}),
 
-		new THREE.MeshBasicMaterial({
+		new THREE.MeshPhongMaterial({
 			color: guiParams.primitiveColors[1],
-			wireframe: true,
 		}),
 
-		new THREE.MeshBasicMaterial({
+		new THREE.MeshStandardMaterial({
 			color: guiParams.primitiveColors[2],
-			wireframe: true,
 		}),
 	];
 

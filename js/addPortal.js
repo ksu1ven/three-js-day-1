@@ -15,7 +15,7 @@ export const addPortal = (scene) => {
 	scene.add(stencilMesh);
 
 	const geometry = new THREE.BoxGeometry();
-	const material = new THREE.MeshPhongMaterial({ color: "red" });
+	const material = new THREE.MeshStandardMaterial({ color: "red" });
 	material.stencilWrite = true;
 	material.stencilRef = stencilRef;
 	material.stencilFunc = THREE.EqualStencilFunc;

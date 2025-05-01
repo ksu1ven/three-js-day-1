@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
+import { getRandomColor } from "./getRandomColor";
 
 const loader = new FontLoader();
 
@@ -24,7 +25,7 @@ export const addLetters = (scene) => {
 			});
 
 			const material = new THREE.MeshBasicMaterial({
-				color: "#ffffff",
+				color: getRandomColor(),
 				wireframe: true,
 			});
 			let mesh = new THREE.Mesh(geometry, material);
