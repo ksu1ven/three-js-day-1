@@ -23,7 +23,7 @@ let actionsPlaying = [];
 let intersects = [];
 
 loader.load(
-	"/assets/models/EgorovAgencyCube.gltf",
+	"/models/EgorovAgencyCube.gltf",
 	function (gltf) {
 		model = gltf.scene;
 

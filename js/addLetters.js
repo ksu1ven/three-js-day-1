@@ -8,7 +8,7 @@ const loader = new FontLoader();
 export const addLetters = (scene) => {
 	const name = "Oksana";
 
-	loader.load("../assets/fonts/optimer_bold.typeface.json", function (font) {
+	loader.load("/fonts/optimer_bold.typeface.json", function (font) {
 		let group = new THREE.Group();
 
 		name.split("").forEach((letter, index) => {
